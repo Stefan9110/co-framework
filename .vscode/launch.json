@@ -70,7 +70,7 @@
       "request": "launch",
       "args": [
         "./a4-diff/tests/${input:diffNumTest}/a.txt",
-        "./a5-diff/tests/${input:diffNumTest}/b.txt",
+        "./a4-diff/tests/${input:diffNumTest}/b.txt",
         "${input:diffFlags}"
       ],
       "program": "a4",
