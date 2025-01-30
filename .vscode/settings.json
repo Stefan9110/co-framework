@@ -1,0 +1,6 @@
+{
+  "cmdCmakeBuild": "cmake -B .cmake -G \"Unix Makefiles\"",
+  "cmdBuildDebug": "${config:cmdCmakeBuild} && cmake --build .cmake -t",
+  "debug.allowBreakpointsEverywhere": true,
+  "editor.suggest.showWords": false
+}

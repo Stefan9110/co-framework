@@ -1,55 +1,47 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Build A1 InOut",
-            "type": "shell",
-            "command": "cmake --build build -t main",
-            "group": "build",
-        },
-        {
-            "label": "build a5-diff",
-            "type": "shell",
-            "command": "${config:cmdBuildDebug} a5-diff/a5-diff",
-            "group": "build",
-        },
-        {
-            "label": "build a6-printf-frame",
-            "type": "shell",
-            "command": "${config:cmdBuildDebug} a6-printf/a6-printf-frame",
-            "group": "build",
-        },
-        {
-            "label": "build a7-bmp-encode",
-            "type": "shell",
-            "command": "${config:cmdBuildDebug} a7-bmp/a7-bmp-encode",
-            "group": "build",
-        },
-        {
-            "label": "build a7-bmp-decode",
-            "type": "shell",
-            "command": "${config:cmdBuildDebug} a7-bmp/a7-bmp-decode",
-            "group": "build",
-        },
-        {
-            "label": "build a8-hpc (custom)",
-            "type": "shell",
-            "command": "${config:cmdBuildDebug} a8-hpc/a8-hpc -e STREAM_ARRAY_SIZE=${input:hpcSize} STREAM_RUNS=${input:hpcRuns}",
-            "group": "build",
-        },
-    ],
-    "inputs": [
-        {
-            "id": "hpcSize",
-            "type": "promptString",
-            "description": "Array Size",
-            "default": "75000000",
-        },
-        {
-            "id": "hpcRuns",
-            "type": "promptString",
-            "description": "Kernel Runs",
-            "default": "20",
-        },
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build A1 InOut",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a1",
+      "group": "build"
+    },
+    {
+      "label": "Build A2 Factorial",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a2",
+      "group": "build"
+    },
+    {
+      "label": "Build A3A Fibonacci Iterative",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a3a-iter",
+      "group": "build"
+    },
+    {
+      "label": "Build A3A Fibonacci Recursive",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a3a-rec",
+      "group": "build"
+    },
+    {
+      "label": "Build A3B Fibonacci REPL",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a3b",
+      "group": "build"
+    },
+    {
+      "label": "Build A4 Diff",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a4",
+      "group": "build"
+    },
+    {
+      "label": "Build A5 Printf",
+      "type": "shell",
+      "command": "${config:cmdBuildDebug} a5",
+      "group": "build"
+    }
+  ]
 }
