@@ -43,8 +43,8 @@ int main(int argc, char** argv) {
     bool flag_i = false, flag_B = false;
     get_options(argc, argv, &flag_i, &flag_B);
 
-    fprintf(stderr, "calling my_diff(%s, %s, i = %s, B = %s);\n", argv[1],
-            argv[2], BOOL_TO_STR(flag_i), BOOL_TO_STR(flag_B));
+    printf("calling my_diff(%s, %s, i = %s, B = %s);\n", argv[1],
+           argv[2], BOOL_TO_STR(flag_i), BOOL_TO_STR(flag_B));
 
     return my_diff(argv[1], argv[2], flag_i, flag_B);
 }
